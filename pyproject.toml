@@ -1,0 +1,20 @@
+[project]
+name = "study_resource_agent"
+version = "0.1.0"
+description = "study_resource_agent using crewAI"
+authors = [{ name = "Lotta Holmström", email = "lotta.holmstrom@iths.se" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.83.0,<1.0.0"
+]
+
+[project.scripts]
+study_resource_agent = "study_resource_agent.main:run"
+run_crew = "study_resource_agent.main:run"
+train = "study_resource_agent.main:train"
+replay = "study_resource_agent.main:replay"
+test = "study_resource_agent.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

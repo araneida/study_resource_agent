@@ -1,0 +1,32 @@
+research_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Keep in mind that the intended readers are beginner students in this topic.
+    Make sure you find any interesting and relevant information given the current year is 2025.
+  expected_output: >
+    A list with 10 bullet points of the most relevant aspects about {topic}
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report to be used as study material by the student.
+    Make sure the report is detailed and contains any and all relevant information, presented in a
+    pedagogical way.
+  expected_output: >
+    A fully fledged report with the mains topics, each with a full section of information. 
+    Explain each part as a pedagogical teacher would, with enthusiasm. Leave two blank rows after each section.
+    Formatted as markdown without '```'
+  agent: teaching_professor
+
+link_retrieving_task:
+  description: >
+    For each section, separated by two blank lines, do a web search to find accurate and up-to-date links from the web 
+    using Perplexity AI and retrieve urls and descriptions for each url to display between 2 and 6
+    additional resources for a student of {topic}. 
+    Prioritize links with step-by-step guides, exercises, video tutorials and examples. 
+    Important: Double-check that the links work and are on topic.
+    Add them to the end of respective section in the report you got, without modifying the previous text.
+  expected_output: >
+    A fully fledged report with the mains topics, each with a full section of information, and links to additional resources.
+    Formatted as markdown without '```'
+  agent: link_retriever
