@@ -14,19 +14,19 @@ reporting_task:
     pedagogical way.
   expected_output: >
     A fully fledged report with the mains topics, each with a full section of information. 
-    Explain each part as a pedagogical teacher would, with enthusiasm. Leave two blank rows after each section.
+    Explain each part as a pedagogical way, with enthusiasm. Leave two blank rows after each section.
     Formatted as markdown without '```'
   agent: teaching_professor
 
 link_retrieving_task:
   description: >
-    For each section, separated by two blank lines, do a web search to find accurate and up-to-date links from the web 
-    using Perplexity AI and retrieve urls and descriptions for each url to display between 2 and 6
-    additional resources for a student of {topic}. 
-    Prioritize links with step-by-step guides, exercises, video tutorials and examples. 
+    For each section, separated by two blank lines, do a web search to find accurate and up-to-date resources 
+    using Perplexity AI and retrieve URLs and descriptions for each resource. Remember the reader is a student of {topic}.
+    Prioritize step-by-step guides, exercises, video tutorials and online examples. 
+    Collect between 2 and 5 URLs and descriptions for these resources.
     Important: Double-check that the links work and are on topic.
     Add them to the end of respective section in the report you got, without modifying the previous text.
   expected_output: >
-    A fully fledged report with the mains topics, each with a full section of information, and links to additional resources.
+    A fully fledged report with the mains topics, each with a full section of information, and 2-5 links to additional resources.
     Formatted as markdown without '```'
   agent: link_retriever

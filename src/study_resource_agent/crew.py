@@ -49,7 +49,7 @@ class StudyResourceAgent():
 		return Agent(
 			config=self.agents_config['link_retriever'],
 			tools=[search_tool],
-			max_execution_time=1200,
+			max_execution_time=800,
 			verbose=True
 		)
 	
